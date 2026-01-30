@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+}
+
+#container1-star {
+    height: 100vh;
+    margin-left: 50px;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+}
+
+#container1-star .ico {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 99px;
+    margin-top: -100px;
+    opacity: 0;
+
+}
+
+
+#container1-star .star {
+    width: 200px;
+    height: 200px;
+
+    stroke: rgb(255, 255, 255);
+    stroke-width: 15;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1545;
+    opacity: 0;
+}
+
+#container1-star .star path {
+    stroke: #fff;
+    stroke-width: 5px;
+    fill: none;
+    stroke-dasharray: 2000;
+    /* path 전체 길이 */
+    stroke-dashoffset: 0;
+    /* 처음엔 전체 길이만큼 → 완전히 안 보임 */
+    opacity: 0;
+}
+
+
+
+#container2-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+#container2-name svg {
+    width: 500px;
+    stroke-width: 2;
+}
+
+#container2-name svg.name {
+    width: 1400px;
+}
+
+#container2-name svg.name path {
+    stroke-width: 3;
+    stroke: #fff;
+    fill: none;
+    opacity: 0;
+}
+
+
+.name-basic {
+    stroke: #fff;
+    stroke-width: 3;
+    fill: transparent;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+
+/* 이름 배경 */
+.name-bg {
+    fill: #D9D9D9;
+    opacity: 0;
+}
+
+
+
+
+#container2-name button.btn {
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    color: #fff;
+    border-bottom: 10px solid #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#container2-name .line {
+    width: 1200px;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 10;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1545;
+    opacity: 0;
+}
