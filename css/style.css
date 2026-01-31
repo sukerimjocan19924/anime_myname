@@ -50,8 +50,7 @@ body {
     stroke-dasharray: 2000;
     /* path 전체 길이 */
     stroke-dashoffset: 0;
-    /* 처음엔 전체 길이만큼 → 완전히 안 보임 */
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 
@@ -82,11 +81,11 @@ body {
     stroke-width: 3;
     stroke: #fff;
     fill: none;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 
-.name-basic {
+.name-before {
     stroke: #fff;
     stroke-width: 3;
     fill: transparent;
@@ -95,7 +94,7 @@ body {
 }
 
 /* 이름 배경 */
-.name-bg {
+.name-after {
     fill: #D9D9D9;
     opacity: 0;
 }
