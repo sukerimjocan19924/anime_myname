@@ -7,6 +7,13 @@ const tl = anime.timeline({
     }
 });
 
+const tlname = anime.timeline({
+    defaults: {
+        duration: 750,
+        easing: 'easeOutBounce'
+    }
+});
+
 btn.addEventListener('click', nameDraw);
 function nameDraw() {
     // 1) 별 경로 그리기
@@ -35,34 +42,33 @@ function nameDraw() {
     });
 
 
+    tlname.add({
+        targets: '.line',
+        strokeDashoffset: [1545, 0],
+        easing: 'easeInOutSine',
+        opacity: [0, 1],
+        duration: 3000
+    }).add({
+        targets: '.name path.back_name',    // 뒷 이름
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        opacity: [0, 1],
+        duration: 3000
+    }).add({
+        targets: '.name path.lastname',     // 앞 이름 채움
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        opacity: [0, 1],
+        duration: 1000
+    }).add({
+        targets: '.name path.lastname-line',    // 앞 이름 테두리
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        delay: function(el, i) { return i*250},
+        opacity: [0, 1],
+        duration: 3000
+    });
 
-    anime({
-        targets: '.name path.back_name',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        delay: function(el, i) { return i*250},
-        easing: 'easeInOutSine',
-        opacity: [0, 1],
-        duration: 1000,
-        // Storage: 2
-    })  // 뒷 이름
-
-    anime({
-        targets: '.name path.lastname',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        delay: function(el, i) { return i*250},
-        easing: 'easeInOutSine',
-        opacity: [0, 1],
-        duration: 3000,
-    })  // 앞 이름 색상
-    
-    anime({
-        targets: '.name path.lastname-line',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        delay: function(el, i) { return i*250},
-        easing: 'easeInOutSine',
-        opacity: [0, 1],
-        duration: 3000,
-    })  // 앞 이름 테두리
     
 
     anime({
