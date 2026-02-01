@@ -42,21 +42,21 @@ function nameDraw() {
         delay: function(el, i) { return i*250},
         easing: 'easeInOutSine',
         opacity: [0, 1],
-        duration: 4000,
-        Storage: 1000
+        duration: 1000,
+        // Storage: 2
     })  // 뒷 이름
 
     anime({
-        // targets: '.name path.lastname',
+        targets: '.name path.lastname',
         strokeDashoffset: [anime.setDashoffset, 0],
         delay: function(el, i) { return i*250},
-        duration: 3000,
         easing: 'easeInOutSine',
-        opacity: [0, 1]
+        opacity: [0, 1],
+        duration: 3000,
     })  // 앞 이름 색상
     
     anime({
-        // targets: '.name path.lastname-line',
+        targets: '.name path.lastname-line',
         strokeDashoffset: [anime.setDashoffset, 0],
         delay: function(el, i) { return i*250},
         easing: 'easeInOutSine',
@@ -64,9 +64,7 @@ function nameDraw() {
         duration: 3000,
     })  // 앞 이름 테두리
     
-    
-    
-    
+
     anime({
         targets: '.line',
         strokeDashoffset: [1545, 0],
