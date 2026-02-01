@@ -26,19 +26,18 @@ body {
     background-color: yellow;
     border-radius: 99px;
     margin-top: -100px;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 
 #container1-star .star {
     width: 200px;
     height: 200px;
-
     stroke: rgb(255, 255, 255);
     stroke-width: 15;
     stroke-dashoffset: 0;
     stroke-dasharray: 1545;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 
@@ -46,8 +45,8 @@ body {
     stroke: #fff;
     stroke-width: 5px;
     fill: none;
-    stroke-dasharray: 1545;
     stroke-dashoffset: 0;
+    stroke-dasharray: 1545;
 }
 
 
@@ -72,13 +71,12 @@ body {
 #container2-name svg.name path {
     stroke-width: 3;
     stroke: #fff;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 #container2-name svg.name path.lastname-line {
     stroke: red;
 }
-
 
 #container2-name button.btn {
     border: none;
@@ -96,5 +94,5 @@ body {
     stroke-width: 10;
     stroke-dashoffset: 0;
     stroke-dasharray: 1545;
-    opacity: 0;
+    /* opacity: 0; */
 }
