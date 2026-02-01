@@ -75,6 +75,10 @@ body {
     opacity: 0;
 }
 
+#container2-name svg.name path.lastname {
+    stroke: red;
+}
+
 #container2-name button.btn {
     border: none;
     background-color: transparent;

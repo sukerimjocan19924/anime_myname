@@ -34,17 +34,39 @@ function nameDraw() {
         duration: 4000
     });
 
-    // 1) 뒤쪽 이름 윤곽선 그리기
-     anime({
-        targets: '.name path',
+
+
+    anime({
+        targets: '.name path.back_name',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        delay: function(el, i) { return i*250},
+        easing: 'easeInOutSine',
+        opacity: [0, 1],
+        duration: 4000,
+        Storage: 1000
+    })  // 뒷 이름
+
+    anime({
+        // targets: '.name path.lastname',
         strokeDashoffset: [anime.setDashoffset, 0],
         delay: function(el, i) { return i*250},
         duration: 3000,
         easing: 'easeInOutSine',
         opacity: [0, 1]
-    })
-
-    // 7) 라인 애니메이션
+    })  // 앞 이름 색상
+    
+    anime({
+        // targets: '.name path.lastname-line',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        delay: function(el, i) { return i*250},
+        easing: 'easeInOutSine',
+        opacity: [0, 1],
+        duration: 3000,
+    })  // 앞 이름 테두리
+    
+    
+    
+    
     anime({
         targets: '.line',
         strokeDashoffset: [1545, 0],
