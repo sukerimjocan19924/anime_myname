@@ -27,8 +27,7 @@ function nameDraw() {
 
     tl.add({
         targets: '.ico',
-        delay: 6000,
-        opacity: 0
+        opacity: 1,
     });
 
     anime({
@@ -38,7 +37,6 @@ function nameDraw() {
         rotate: path('angle'),
         easing: 'linear',
         delay: 6000,
-        opacity: 1,
         duration: 3000
     });
 

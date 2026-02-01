@@ -60,7 +60,6 @@ body {
 #container2-name svg.name path {
     stroke-width: 3;
     stroke: #fff;
-    /* opacity: 0; */
 }
 
 #container2-name svg.name path.lastname-line {
@@ -83,5 +82,4 @@ body {
     stroke-width: 10;
     stroke-dashoffset: 0;
     stroke-dasharray: 1545;
-    /* opacity: 0; */
 }
