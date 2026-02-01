@@ -16,7 +16,6 @@ function nameDraw() {
         duration: 2500,
         easing: 'easeInOutSine',
         direction: 'alternate',
-        opacity: 1
     });
 
     // 2) 아이콘 나타나기
@@ -36,39 +35,14 @@ function nameDraw() {
     });
 
     // 1) 뒤쪽 이름 윤곽선 그리기
-    // anime({
-    //     targets: '.name-basic',
-    //     strokeDashoffset: [anime.setDashoffset, 0],
-    //     duration: 3000,
-    //     easing: 'easeInOutSine',
-    // });
-
-    anime({
-        targets: '.name-basic path',
+     anime({
+        targets: '.name path',
         strokeDashoffset: [anime.setDashoffset, 0],
-        duration: 1000,
         delay: function(el, i) { return i*250},
-        easing: 'easeInOutSine'
+        duration: 3000,
+        easing: 'easeInOutSine',
+        opacity: [0, 1]
     })
-
-    // 2) 배경 나타나기 (윤곽선 다 그려진 뒤)
-    anime({
-        targets: '.name-bg',
-        opacity: [0, 1],
-        duration: 2000,
-        delay: 3500,
-        easing: 'easeInOutQuad'
-    });
-
-    // 3) 앞쪽 테두리 그리기 (배경이 나타난 뒤)
-    anime({
-        targets: '.name-outline',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        duration: 2500,
-        delay: 5500,
-        easing: 'easeOutQuad'
-    });
-
 
     // 7) 라인 애니메이션
     anime({
