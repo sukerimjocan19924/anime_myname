@@ -19,7 +19,7 @@ function nameDraw() {
     tl.add({
         targets: '.star path',
         strokeDashoffset: [anime.setDashoffset, 0],
-        duration: 6000,
+        duration: 4000,
         easing: 'easeInOutSine',
         direction: 'alternate',
         opacity: 1
@@ -27,7 +27,7 @@ function nameDraw() {
 
     tl.add({
         targets: '.ico',
-        opacity: 1
+        opacity: 1,
     });
 
     anime({
@@ -36,7 +36,8 @@ function nameDraw() {
         translateY: path('y'),
         rotate: path('angle'),
         easing: 'linear',
-        duration: 4000
+        delay: 6000,
+        duration: 3000
     });
 
 
@@ -44,7 +45,7 @@ function nameDraw() {
         targets: '.line',
         strokeDashoffset: [1545, 0],
         easing: 'easeInOutSine',
-        opacity: [0, 1],
+        opacity: 1,
         duration: 3000
     }).add({
         targets: '.name path.back_name',    // 뒷 이름
@@ -65,6 +66,6 @@ function nameDraw() {
         easing: 'easeInOutSine',
         delay: function(el, i) { return i*250},
         opacity: [0, 1],
-        duration: 3000
+        duration: 2500
     });
 }
